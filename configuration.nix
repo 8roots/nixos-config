@@ -24,10 +24,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-  git
-  ripgrep
-  fd
-  fzf
+  openssh
   jq
   tree
   btop
