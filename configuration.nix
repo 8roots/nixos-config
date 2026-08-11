@@ -8,13 +8,14 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [
-    # include NixOS-WSL modules
-    <nixos-wsl/modules>
-  ];
-
   wsl.enable = true;
   wsl.defaultUser = "nixos";
+  
+  nix.settings.experimental-features = [
+  "nix-command"
+  "flakes"
+];
+
 
   networking.proxy = {
   default = "http://127.0.0.1:10808";
